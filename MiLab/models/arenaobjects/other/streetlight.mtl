@@ -1,0 +1,9 @@
+# Wavefront material file exported with NetRadiants brushexport plugin.
+# Material Count: 2
+
+newmtl textures/base_light/ceil1_22a_10k
+Kd 0.371148 0.178408 0.0931849
+map_Kd textures/base_light/ceil1_22a_10k
+newmtl textures/base_support/flat1_1
+Kd 0.0945619 0.0912607 0.078069
+map_Kd textures/base_support/flat1_1

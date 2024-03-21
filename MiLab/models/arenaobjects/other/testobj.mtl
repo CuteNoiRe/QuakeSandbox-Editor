@@ -1,0 +1,123 @@
+# Wavefront material file exported with NetRadiants brushexport plugin.
+# Material Count: 40
+
+newmtl textures/
+Kd 0.123181 0.123181 0.521235
+map_Kd textures/
+newmtl textures/base_light/ceil_white5k
+Kd 0.306663 0.284695 0.223852
+map_Kd textures/base_light/ceil_white5k
+newmtl textures/base_light/cornerlight
+Kd 0.152531 0.211648 0.186291
+map_Kd textures/base_light/cornerlight
+newmtl textures/base_support/flat1_1
+Kd 0.0945619 0.0912607 0.078069
+map_Kd textures/base_support/flat1_1
+newmtl textures/base_wall/glass01
+Kd 0.527756 0.147606 0.147606
+map_Kd textures/base_wall/glass01
+newmtl textures/common/botclip
+Kd 0.802091 0.452125 0.100265
+map_Kd textures/common/botclip
+newmtl textures/common/caulk
+Kd 0.777691 0.777691 0.0512171
+map_Kd textures/common/caulk
+newmtl textures/common/clip
+Kd 0.999876 0.345256 0.345256
+map_Kd textures/common/clip
+newmtl textures/common/trigger
+Kd 0.7855 0.319285 0.7855
+map_Kd textures/common/trigger
+newmtl textures/e7/e7bmtrim
+Kd 0.267056 0.268013 0.268058
+map_Kd textures/e7/e7bmtrim
+newmtl textures/e7/e7brickfloor01
+Kd 0.241548 0.242594 0.239514
+map_Kd textures/e7/e7brickfloor01
+newmtl textures/e7/e7bricks01
+Kd 0.257942 0.25663 0.247378
+map_Kd textures/e7/e7bricks01
+newmtl textures/e7/e7panelwood
+Kd 0.317004 0.248987 0.209157
+map_Kd textures/e7/e7panelwood
+newmtl textures/e7/e7panelwood2
+Kd 0.29719 0.236557 0.200199
+map_Kd textures/e7/e7panelwood2
+newmtl textures/e7/e7sbrickfloor
+Kd 0.177873 0.175796 0.169065
+map_Kd textures/e7/e7sbrickfloor
+newmtl textures/e7/e7swindow
+Kd 0.192125 0.184222 0.171198
+map_Kd textures/e7/e7swindow
+newmtl textures/evil8_floor/e8cretefloor01b
+Kd 0.231347 0.217452 0.203419
+map_Kd textures/evil8_floor/e8cretefloor01b
+newmtl textures/fogs/fogyou
+Kd 0.527756 0.147606 0.147606
+map_Kd textures/fogs/fogyou
+newmtl textures/gothic_block/blocks11b
+Kd 0.270881 0.24364 0.226412
+map_Kd textures/gothic_block/blocks11b
+newmtl textures/gothic_block/blocks15_blue
+Kd 0.192248 0.245884 0.314372
+map_Kd textures/gothic_block/blocks15_blue
+newmtl textures/gothic_block/blocks18b
+Kd 0.264621 0.225633 0.207951
+map_Kd textures/gothic_block/blocks18b
+newmtl textures/gothic_block/blocks18d
+Kd 0.17119 0.150747 0.135628
+map_Kd textures/gothic_block/blocks18d
+newmtl textures/gothic_block/killblock
+Kd 0.286183 0.262752 0.247722
+map_Kd textures/gothic_block/killblock
+newmtl textures/gothic_block/killblock_j2
+Kd 0.258627 0.222975 0.213322
+map_Kd textures/gothic_block/killblock_j2
+newmtl textures/gothic_floor/largerblock3b3
+Kd 0.265376 0.207489 0.17042
+map_Kd textures/gothic_floor/largerblock3b3
+newmtl textures/gothic_floor/largerblock3b3dim
+Kd 0.211306 0.196433 0.194944
+map_Kd textures/gothic_floor/largerblock3b3dim
+newmtl textures/gothic_floor/q1metal7_99
+Kd 0.384858 0.374275 0.247775
+map_Kd textures/gothic_floor/q1metal7_99
+newmtl textures/gothic_light/ironcrosslt2_10000
+Kd 0.191458 0.162241 0.132079
+map_Kd textures/gothic_light/ironcrosslt2_10000
+newmtl textures/gothic_trim/border7
+Kd 0.17655 0.17899 0.15702
+map_Kd textures/gothic_trim/border7
+newmtl textures/gothic_trim/km_arena1tower4
+Kd 0.409968 0.278807 0.238255
+map_Kd textures/gothic_trim/km_arena1tower4
+newmtl textures/gothic_trim/metalsupport4i_bit
+Kd 0.239098 0.184277 0.160792
+map_Kd textures/gothic_trim/metalsupport4i_bit
+newmtl textures/gothic_trim/pitted_rust3
+Kd 0.263613 0.204631 0.181547
+map_Kd textures/gothic_trim/pitted_rust3
+newmtl textures/gothic_trim/wood2
+Kd 0.235649 0.169093 0.100404
+map_Kd textures/gothic_trim/wood2
+newmtl textures/gothic_wall/oct20c
+Kd 0.22536 0.178452 0.130339
+map_Kd textures/gothic_wall/oct20c
+newmtl textures/gothic_wall/proto_brik
+Kd 0.188684 0.107757 0.0610604
+map_Kd textures/gothic_wall/proto_brik
+newmtl textures/gothic_wall/slateroofc
+Kd 0.321954 0.319893 0.328492
+map_Kd textures/gothic_wall/slateroofc
+newmtl textures/organics/dirt2
+Kd 0.162801 0.102474 0.0549835
+map_Kd textures/organics/dirt2
+newmtl textures/skies/nitesky
+Kd 0.0434276 0.0397348 0.118666
+map_Kd textures/skies/nitesky
+newmtl textures/skin/pjwal2k
+Kd 0.325263 0.297286 0.284073
+map_Kd textures/skin/pjwal2k
+newmtl textures/stone/pjrock6
+Kd 0.325551 0.292907 0.13374
+map_Kd textures/stone/pjrock6

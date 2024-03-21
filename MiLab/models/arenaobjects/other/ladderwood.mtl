@@ -1,0 +1,6 @@
+# Wavefront material file exported with NetRadiants brushexport plugin.
+# Material Count: 1
+
+newmtl textures/e7/e7panelwood
+Kd 0.317004 0.248987 0.209157
+map_Kd textures/e7/e7panelwood
