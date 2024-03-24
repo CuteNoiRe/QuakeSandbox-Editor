@@ -39,60 +39,6 @@ Spawn point used in Domination by the red team
 This entity may not work with mods designed for the game OA is inspired from.
 Maps must have at least 8 of this kind of spawnpoint without either 'gametype' or '!gametype' in order to prevent friendly telefragging. Bigger maps may require up to 16 of this spawnpoint.
 </point>
-<point name="target_cmd" color="0.20 0.99 0.75" box="-16 -16 -24 16 16 32" model="">
-Writes commands to the server admin console.
--------- KEYS --------
-<string key="target" name="Command">Сommand to сonsole.</string>
-<targetname key="targetname" name="Target Name">Control entity.</targetname>
-<targetname key="targetname2" name="Target Name 2">Control entity.</targetname>
--------- SPAWNFLAGS --------
--------- NOTES --------
-This entity can execute configs and scripts.
-</point>
-  
-<point name="target_sound" color="0.20 0.99 0.75" box="-16 -16 -24 16 16 32" model="">
-Turns on sound activator.
--------- KEYS --------
-<sound key="target" name="Sound">Turns on sound activator.</sound>
-<targetname key="targetname" name="Target Name">Control entity.</targetname>
-<targetname key="targetname2" name="Target Name 2">Control entity.</targetname>
--------- SPAWNFLAGS --------
--------- NOTES --------
-This entity may not work with mods designed for the game NextArena is inspired from.
-</point>
-  
-<point name="target_model" color="0.20 0.99 0.75" box="-16 -16 -24 16 16 32" model="">
-Turns on model activator.
--------- KEYS --------
-<string key="target" name="Model">Turns on model activator.</string>
-<targetname key="targetname" name="Target Name">Control entity.</targetname>
-<targetname key="targetname2" name="Target Name 2">Control entity.</targetname>
--------- SPAWNFLAGS --------
--------- NOTES --------
-This entity may not work with mods designed for the game NextArena is inspired from.
-</point>
-  
-<point name="target_head" color="0.20 0.99 0.75" box="-16 -16 -24 16 16 32" model="">
-Turns on head activator.
--------- KEYS --------
-<string key="target" name="Head">Turns on head activator.</string>
-<targetname key="targetname" name="Target Name">Control entity.</targetname>
-<targetname key="targetname2" name="Target Name 2">Control entity.</targetname>
--------- SPAWNFLAGS --------
--------- NOTES --------
-This entity may not work with mods designed for the game NextArena is inspired from.
-</point>
-  
-<point name="target_legs" color="0.20 0.99 0.75" box="-16 -16 -24 16 16 32" model="">
-Turns on legs activator.
--------- KEYS --------
-<string key="target" name="Legs">Turns on legs activator.</string>
-<targetname key="targetname" name="Target Name">Control entity.</targetname>
-<targetname key="targetname2" name="Target Name 2">Control entity.</targetname>
--------- SPAWNFLAGS --------
--------- NOTES --------
-This entity may not work with mods designed for the game NextArena is inspired from.
-  </point>
 
 <point name="weapon_flamethrower" color="1 0 .5" box="-16 -16 -16 16 16 16" model="models/weapons2/flamethrower/rocketl.md3">
 Flamethrower. Added in ArenaUnlimited.

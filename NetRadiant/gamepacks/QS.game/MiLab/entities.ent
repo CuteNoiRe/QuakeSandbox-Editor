@@ -2568,16 +2568,6 @@ Location marker used by bots and players for team orders and team chat in the co
 <string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
 </point>
 
-<point name="target_music" color="0 .7 .7" box="-8 -8 -8 8 8 8">
-Sets the current music track to be played.
--------- KEYS --------
-<targetname key="targetname" name="targetname">activating entity points to this.</targetname>
-<targetname key="targetname2" name="targetname2">activating entity points to this.</targetname>
-<sound key="music" name="music">path/name of looping .wav file used for level's music (eg. music/sonic5.wav).</sound>
--------- NOTES --------
-Setting an empty music key or completely omitting it will make the music stop playing.
-</point>
-
 <point name="target_objective" color="0 .5 0" box="-8 -8 -8 8 8 8">
 Sets the primary or secondary objective for a player. Primary objective text should be no more than 300 characters. Secondary objective text should be no more than 240 characters. Objective texts are wrapped to a new line after 60 characters.
 -------- KEYS --------
@@ -2648,20 +2638,6 @@ This will print a message on the center of the screen when triggered. By default
 <flag key="BLUETEAM" name="Blue Team Only" bit="1">Only the blue team players will see the message.</flag>
 <flag key="PRIVATE" name="Activator Only" bit="2">Only the player that activates the target will see the message.</flag>
 <flag key="SUBTITLE" name="Subtitle" bit="3">The message will be printed at the bottom of the screen in a smaller font.</flag>
-</point>
-
-<point name="target_clientcmd" color="0 .5 0" box="-8 -8 -8 8 8 8">
-This will print in client console command when triggered. By default, all the clients will receive the command.
--------- KEYS --------
-<string key="message" name="Command">Command string to send to players.</string>
-<targetname key="targetname" name="Target Name">The activating trigger points to this.</targetname>
-<targetname key="targetname2" name="Target Name 2">The activating trigger points to this.</targetname>
-<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
-<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
-<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
-<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
--------- SPAWNFLAGS --------
-<flag key="Only Activator" name="Only Activator" bit="0">Activator player will receive the command. Not All</flag>
 </point>
 
 <!--
@@ -3572,14 +3548,78 @@ Writes or compares the value of a specified variable and activates its target ba
 <string key="key" name="key">The name of the variable to read or write.</string>
 <string key="value" name="value">The value that will be written or compared to.</string>
 -------- SPAWNFLAGS --------
-<flag key="=" name="=" bit="0">The entity reads the specified variable and triggers its targets if the specified value matches the value stored in the variable.</flag>
-<flag key="!=" name="!=" bit="1">The entity reads the specified variable and triggers its targets if the specified value does not match the value stored in the variable.</flag>
-<flag key="<=" name="<=" bit="2">The entity reads the specified variable and triggers its targets if the specified value does not bigger the value stored in the variable.</flag>
-<flag key=">=" name=">=" bit="3">The entity reads the specified variable and triggers its targets if the specified value does not bigger the value stored in the variable.</flag>
+<flag key="MATCH" name="MATCH" bit="0">The entity reads the specified variable and triggers its targets if the specified value matches the value stored in the variable.</flag>
+<flag key="NOT_MATCH" name="NOT_MATCH" bit="1">The entity reads the specified variable and triggers its targets if the specified value does not match the value stored in the variable.</flag>
+<flag key="LESS_OR_MATCH" name="LESS_OR_MATCH" bit="2">The entity reads the specified variable and triggers its targets if the specified value does not bigger the value stored in the variable.</flag>
+<flag key="MORE_OR_MATCH" name="MORE_OR_MATCH" bit="3">The entity reads the specified variable and triggers its targets if the specified value does not bigger the value stored in the variable.</flag>
 <flag key="IMMEDIATELY" name="IMMEDIATELY" bit="12">The entity will be activated when it is spawned.</flag>
 <flag key="SAVE_VARIABLE" name="SAVE_VARIABLE" bit="13">The variable saves to config and saves (add reset variables to new_game.as).</flag>
 -------- NOTES --------
 When neither = or != have been set, the entity will write the specified value to the specified variable.Written variables will persists across mapchanges if the map changes was initialized by the target_mapchange entity.
+</point>
+
+<point name="script_layer" color=".7 .3 .7" box="-16 -16 -24 16 16 32">
+Activating this will teleport players to another layer.
+-------- KEYS --------
+<target key="target" name="Target">This must point to a script_controllayer entity.</target>
+<targetname key="targetname" name="Target Name">Activating trigger points to this.</targetname>
+<target key="target2" name="Target 2">this points to entities to activate when this entity is triggered.</target>
+<targetname key="targetname2" name="Target Name 2">this points to entities to activate when this entity is triggered.</targetname>
+<targetname key="distance" name="distance">height of the current world (where cmd to find out).</targetname>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+</point>
+
+<point name="script_cmd" color=".7 .3 .7" box="-8 -8 -8 8 8 8">
+Executes various commands
+-------- KEYS --------
+<target key="target" name="Target">This must any command.</target>
+<targetname key="targetname" name="Target Name">Activating trigger points to this.</targetname>
+<target key="target2" name="Target 2">this points to entities to activate when this entity is triggered.</target>
+<targetname key="targetname2" name="Target Name 2">this points to entities to activate when this entity is triggered.</targetname>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- SPAWNFLAGS --------
+<flag key="SERVER" name="SERVER" bit="0">The command will be executed on the server.</flag>
+<flag key="ACTIVATOR" name="ACTIVATOR" bit="1">The command will be executed by the activator.</flag>
+<flag key="ALL" name="ALL" bit="2">The command will be executed by all clients.</flag>
+<flag key="IMMEDIATELY" name="IMMEDIATELY" bit="12">The entity will be activated when it is spawned.</flag>
+</point>
+
+<point name="script_menu" color=".7 .3 .7" box="-8 -8 -8 8 8 8">
+Opens the menu in MGui.
+-------- KEYS --------
+<target key="target" name="Target">Menu file in mgui/pages folder.</target>
+<targetname key="targetname" name="Target Name">Activating trigger points to this.</targetname>
+<target key="target2" name="Target 2">this points to entities to activate when this entity is triggered.</target>
+<targetname key="targetname2" name="Target Name 2">this points to entities to activate when this entity is triggered.</targetname>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
+-------- SPAWNFLAGS --------
+<flag key="SERVER" name="SERVER" bit="0">The menu will be opened on the server.</flag>
+<flag key="ACTIVATOR" name="ACTIVATOR" bit="1">The menu will be opened by the activator.</flag>
+<flag key="ALL" name="ALL" bit="2">The menu will be opened by all clients.</flag>
+<flag key="IMMEDIATELY" name="IMMEDIATELY" bit="12">The entity will be activated when it is spawned.</flag>
+</point>
+
+<point name="script_aicontrol" color=".7 .3 .7" box="-8 -8 -8 8 8 8">
+Controls the NPC.
+-------- KEYS --------
+<target key="target" name="Target">Order for NPC (see docs/npc_orders).</target>
+<targetname key="targetname" name="Target Name">Activating trigger points to this.</targetname>
+<target key="target2" name="Target 2">this points to entities to activate when this entity is triggered.</target>
+<targetname key="targetname2" name="Target Name 2">this points to entities to activate when this entity is triggered.</targetname>
+<targetname key="clientname" name="Client Name">NPC name for control.</targetname>
+<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
+<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
+<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
+<string key="gametype" name="Game Type">Defines the gametypes that will spawn this item. Q3A values: ffa tournament single team ctf. Q3TA values: oneflag obelisk harvester teamtournament.</string>
 </point>
 
 </classes>
