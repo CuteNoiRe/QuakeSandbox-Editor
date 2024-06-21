@@ -8,63 +8,86 @@ build commands
 <var name="q3map2">"[RadiantPath]q3map2.[ExecutableType]" -v<cond value="[MonitorAddress]"> -connect [MonitorAddress]</cond> -game quake3 -fs_basepath "[EnginePath]"<cond value="[GameName]"> -fs_game [GameName]</cond></var>
 <var name="mbspc">"[RadiantPath]mbspc.[ExecutableType]"</var>
 <var name="arenau">"[RadiantPath]StartQS.bat"</var>
-<build name="Build: LM Ultra+">
-<command>[q3map2] -meta -samplesize 8 &quot;[MapFile]&quot;</command>
+<build name="Build: LM 16x">
+<command>[q3map2] -meta -samplesize 1 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 2048 -lightmapsize 2048 -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 8 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 2 -shade &quot;[MapFile]&quot;</command>
 </build>
-<build name="Build: LM Ultra">
-<command>[q3map2] -meta -samplesize 4 &quot;[MapFile]&quot;</command>
-<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 1024 -lightmapsize 1024 -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 4 &quot;[MapFile]&quot;</command>
-</build>
-<build name="Build: LM High">
+<build name="Build: LM 8x">
 <command>[q3map2] -meta -samplesize 2 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 512 -lightmapsize 512 -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 2 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 2 -shade &quot;[MapFile]&quot;</command>
 </build>
-<build name="Build: ST Ultra+">
-<command>[q3map2] -meta -samplesize 8 &quot;[MapFile]&quot;</command>
-<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 8 -fastbounce -bounce 8 -bouncescale 2 -bouncecolorratio 0.80 -gamma 0.70 -filter &quot;[MapFile]&quot;</command>
-</build>
-<build name="Build: ST Ultra">
+<build name="Build: LM 4x">
 <command>[q3map2] -meta -samplesize 4 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 4 -fastbounce -bounce 4 -bouncescale 2 -bouncecolorratio 0.80 -gamma 0.70 -filter &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 2 -shade &quot;[MapFile]&quot;</command>
 </build>
-<build name="Build: ST High">
-<command>[q3map2] -meta -samplesize 2 &quot;[MapFile]&quot;</command>
+<build name="Build: LM 2x">
+<command>[q3map2] -meta -samplesize 8 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -brightness 2 -dark -exposure 200 -patchshadows -shade -samples 2 -fastbounce -bounce 2 -bouncescale 2 -bouncecolorratio 0.80 -gamma 0.70 -filter &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 2 -shade &quot;[MapFile]&quot;</command>
 </build>
-<build name="Build: ST Very Low">
+<build name="Build: LM 1x">
+<command>[q3map2] -meta -samplesize 16 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 2 -shade &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: ST Normal">
+<command>[q3map2] -meta &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: ST Low">
 <command>[q3map2] -meta "[MapFile]"</command>
 <command>[q3map2] -vis -fast "[MapFile]"</command>
-<command>[q3map2] -light -novertex -fast -fastgrid "[MapFile]"</command>
+<command>[q3map2] -light -novertex -fast -fastgrid -brightness 0.8 "[MapFile]"</command>
+</build>
+<build name="Build: ST Low (no optimize)">
+<command>[q3map2] -meta -samplesize 16 "[MapFile]"</command>
+<command>[q3map2] -light -novertex -fast -fastgrid -brightness 0.8 "[MapFile]"</command>
 </build>
 <separator />
-<build name="Build: Auto LM Ultra+">
-<command>[q3map2] -meta -samplesize 8 &quot;[MapFile]&quot;</command>
+<build name="Build: Auto LM 16x">
+<command>[q3map2] -meta -samplesize 1 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 2048 -lightmapsize 2048 -gamma 0.80 -skyscale 1.20 -patchshadows -shade -samples 8 -filter -floodlight &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade -floodlight &quot;[MapFile]&quot;</command>
 </build>
-<build name="Build: Auto LM Ultra">
-<command>[q3map2] -meta -samplesize 4 &quot;[MapFile]&quot;</command>
-<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 1024 -lightmapsize 1024 -gamma 0.80 -skyscale 1.20 -patchshadows -shade -samples 4 -floodlight &quot;[MapFile]&quot;</command>
-</build>
-<build name="Build: Auto LM High">
+<build name="Build: Auto LM 8x">
 <command>[q3map2] -meta -samplesize 2 &quot;[MapFile]&quot;</command>
 <command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
-<command>[q3map2] -light  -novertex  -extlmhacksize 512 -lightmapsize 512 -gamma 0.80 -skyscale 1.20 -patchshadows -shade -samples 2 -floodlight &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade -floodlight &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: Auto LM 4x">
+<command>[q3map2] -meta -samplesize 4 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade -floodlight &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: Auto LM 2x">
+<command>[q3map2] -meta -samplesize 8 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade -floodlight &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: Auto LM 1x">
+<command>[q3map2] -meta -samplesize 16 &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -extlmhacksize 2048 -lightmapsize 2048 -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.80 -shade -floodlight &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: Auto ST Normal">
+<command>[q3map2] -meta &quot;[MapFile]&quot;</command>
+<command>[q3map2] -vis -fast &quot;[MapFile]&quot;</command>
+<command>[q3map2] -light -fast -novertex -patchshadows -filter -samples 4 -dark -exposure 200 -brightness 0.4 -shade -floodlight -sunonly &quot;[MapFile]&quot;</command>
+</build>
+<build name="Build: Auto ST Low">
+<command>[q3map2] -meta "[MapFile]"</command>
+<command>[q3map2] -vis -fast "[MapFile]"</command>
+<command>[q3map2] -light -novertex -fast -fastgrid -floodlight -sunonly -brightness 0.4 "[MapFile]"</command>
+</build>
+<build name="Build: Auto ST Low (no optimize)">
+<command>[q3map2] -meta -samplesize 16 "[MapFile]"</command>
+<command>[q3map2] -light -novertex -fast -fastgrid -floodlight -sunonly -brightness 0.4 "[MapFile]"</command>
 </build>
 <separator />
-<build name="Debug: Fast compile">
-<command>[q3map2] -meta "[MapFile]"</command>
-<command>[q3map2] -vis "[MapFile]"</command>
-<command>[q3map2] -light -styles -novertex -fast -fastgrid "[MapFile]"</command>
-</build>
 <build name="Debug: Analyze">
 <command>[q3map2] -analyze "[BspFile]"</command>
 <command>PAUSE</command>
@@ -81,10 +104,6 @@ build commands
 <command>[q3map2] -exportents "[BspFile]"</command>
 </build>
 <separator />
-<build name="Bots: Fast">
-<command>[mbspc] -threads 8 -freetree -breadthfirst -optimize -nocsg -nobrushmerge -bsp2aas &quot;[BspFile]&quot;</command>
-<command>PAUSE</command>
-</build>
 <build name="Bots: Optimized">
 <command>[mbspc] -threads 8 -forcesidesvisible -optimize -bsp2aas &quot;[BspFile]&quot;</command>
 <command>PAUSE</command>
