@@ -1,18 +1,4 @@
-//**********************************************************************//
-//	shaderlist.txt modified for Q3Radiant				//
-//	by Eutectic - 13 May 2000					//
-//									//
-//	Added the names of the new shader files created as a result	//
-//	of the cleanup of the old shader files so Q3Radiant will read	//
-//	and display all the shaders in the texture window.		//
-//									//
-//	SHADER FILE NAMES ADDED:					//
-//	base_door							//
-//	gothic_button							//
-//	gothic_door							//
-//**********************************************************************//
-
-// this file lists all the separate shader files
+// Quake Sandbox shaderlist
 base_button
 base_door
 base_floor
@@ -23,9 +9,6 @@ base_trim
 base_wall
 common
 ctf
-//eerie
-//gfx
-//hell
 gothic_block
 gothic_button
 gothic_door
@@ -54,8 +37,6 @@ cosmoflash
 evil8
 evil8_base
 museum
-//menu
-//models
 organics
 sfx
 sfx2

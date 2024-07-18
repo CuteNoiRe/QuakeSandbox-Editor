@@ -10,7 +10,7 @@
   engine_linux="qsand.x64"
   engine_macos="qsand.app"
   prefix=".qs"
-  basegame="MiLab"
+  basegame="milab"
   basegamename="Quake Sandbox"
   unknowngamename="Quake Sandbox modification"
   shaderpath="scripts"
