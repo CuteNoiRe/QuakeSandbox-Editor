@@ -1,6 +1,0 @@
-# Wavefront material file exported with NetRadiants brushexport plugin.
-# Material Count: 1
-
-newmtl textures/arenaobjects/trop_shrub_02
-Kd 0.235649 0.169093 0.100404
-map_Kd textures/arenaobjects/trop_shrub_02
