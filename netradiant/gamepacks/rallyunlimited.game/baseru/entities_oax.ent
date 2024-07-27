@@ -34,7 +34,7 @@ And this would turn it back off:
  "targetShaderNewName" "textures/proto2/redlight_off"
 </point>
 
-<point name="ammo_flame" color=".3 .3 1" box="-16 -16 -16 16 16 16" model="models/powerups/ammo/flamethroweram.md3">
+<point name="ammo_flame" color=".3 .3 1" box="-16 -16 -16 16 16 16" model="models/powerups/ammo/flameam.md3">
 Flamethrower ammo. Gives the player 100 by default.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="40">Time in seconds before item respawns after being picked up (default 40, -1 = never respawn).</real>

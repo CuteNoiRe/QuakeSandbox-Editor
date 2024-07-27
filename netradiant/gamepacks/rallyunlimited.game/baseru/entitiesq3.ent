@@ -949,7 +949,7 @@ Used as a positional target for light entities to create a spotlight effect. A t
 =============================================================================
 -->
 
-<point name="info_player_start" color="1 0 0" box="-16 -16 -24 16 16 32">
+<point name="info_player_start" color="1 0 0" box="-50 -24 -24 50 24 24">
 Player spawn location.
 -------- KEYS --------
 <angle key="angle" name="angle">direction in which player will look when spawning in the game. Does not apply to bots.</angle>
@@ -967,7 +967,7 @@ Player spawn location.
 Targetting an info_player_start spawnpoint with a trigger will enable or disable the spawnpoint. Spawnpoints are by default enabled unless the DISABLED spawnflag is set. Note that a spawnpoint that is disabled because it reached its [count] number of spawns is not enabled by triggering it.
 </point>
 
-<point name="info_player_deathmatch" color="1 0 1" box="-16 -16 -24 16 16 32">
+<point name="info_player_deathmatch" color="1 0 1" box="-50 -24 -24 50 24 24">
 Normal player spawning location for Q3A levels.
 -------- KEYS --------
 <angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game. Does not apply to bots.</angle>
@@ -988,16 +988,6 @@ Normal player spawning location for Q3A levels.
 <flag key="DISABLED" name="Disable Spawn Point" bit="1">The spawn point is in a disabled state when the map is first loaded. It can be enabled by triggering it.</flag>
 </point>
 
-<point name="info_waypoint" color="0 .4 .4" box="-16 -16 -24 16 16 32">
-Bot patrolling waypoint.
--------- KEYS --------
-<target key="target" name="target">point at another info_waypoint to chain waypoints together</target>
-<targetname key="targetname" name="targetname">target another info_waypoint or a target_botspawn entity at this to make a bot move to this waypoint after reaching the previous waypoint or spawning.</targetname>
-<real key="wait" name="wait">number of seconds bot will wait at waypoint before moving on. -1 will make the bot wait indefinitely. When attacked, the bot will still break free and return fire (default 0).</real>
--------- NOTES --------
-Waypoints can be chained together to form a path. A bot that's spawned at a target_botspawn that targets a waypoint which is part of the path will walk along this path. It is possible to make circular paths. When paths aren't circular, the bot will move up and down the path.
-</point>
-
 <!--
 =============================================================================
 -->
@@ -1014,31 +1004,13 @@ In genuine bot arena matches, the podium for the 1st, 2nd and 3rd place players 
 
 <!--
 =============================================================================
--->
-
-<!--
-=============================================================================
--->
-
-<!--
-<point name="info_spectator_start" color="1 0 0" box="-16 -16 -24 16 16 32">
-Spectator spawn location. Doesn't appear to work in game. Commented out.
-======== KEYS ========
-<boolean key="notfree" name="Hidden For FFA">When set to 1, entity will not spawn in "Free for all" and "Tournament" modes.</boolean>
-<boolean key="notteam" name="Hidden For Teamplay">When set to 1, entity will not spawn in "Teamplay" and "CTF" modes.</boolean>
-<boolean key="notsingle" name="Hidden For SP">When set to 1, entity will not spawn in Single Player mode (bot play mode).</boolean>
-</point>
--->
-
-<!--
-=============================================================================
 
 ITEM_* ENTITIES
 
 =============================================================================
 -->
 
-<point name="item_armor_red" color=".6 0 0" box="-16 -16 -16 16 16 16" model="models/powerups/armor/armor_red.md3">
+<point name="item_armor_red" color=".6 0 0" box="-16 -16 -16 16 16 16">
 Red Armor - 100 points. All armor can be cumulated up to a maximum of 200 points and slowly wears out to 100 points.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="25">Time in seconds before item respawns after being picked up (default 25, -1 = never respawn).</real>
@@ -1075,7 +1047,7 @@ And this would turn it back off:
 =============================================================================
 -->
 
-<point name="item_armor_yellow" color="1 .75 .3" box="-16 -16 -16 16 16 16" model="models/powerups/armor/armor_yel.md3">
+<point name="item_armor_yellow" color="1 .75 .3" box="-16 -16 -16 16 16 16">
 Yellow Armor - 50 points. All armor can be cumulated up to a maximum of 200 points and slowly wears out to 100 points.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="25">Time in seconds before item respawns after being picked up (default 25, -1 = never respawn).</real>
@@ -1112,7 +1084,7 @@ And this would turn it back off:
 =============================================================================
 -->
 
-<point name="item_armor_green" color="1 .75 .3" box="-16 -16 -16 16 16 16" model="models/powerups/armor/armor_gre.md3">
+<point name="item_armor_green" color="1 .75 .3" box="-16 -16 -16 16 16 16">
 Green Armor - 25 points. All armor can be cumulated up to a maximum of 200 points and slowly wears out to 100 points.
 -------- KEYS --------
 <real key="wait" name="Respawn Delay" value="25">Time in seconds before item respawns after being picked up (default 25, -1 = never respawn).</real>
@@ -2219,7 +2191,7 @@ Blue team flag for CTF games.
 =============================================================================
 -->
 
-<point name="team_CTF_blueplayer" color="0 .2 1" box="-16 -16 -24 16 16 32">
+<point name="team_CTF_blueplayer" color="0 .2 1" box="-50 -24 -24 50 24 24">
 Initial Blue team spawning position for CTF games. This is where players spawn when they join the Blue team.
 -------- KEYS --------
 <angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game.</angle>
@@ -2231,7 +2203,7 @@ Initial Blue team spawning position for CTF games. This is where players spawn w
 =============================================================================
 -->
 
-<point name="team_CTF_bluespawn" color="0 .2 1" box="-16 -16 -24 16 16 32">
+<point name="team_CTF_bluespawn" color="0 .2 1" box="-50 -24 -24 50 24 24">
 Blue team respawning position for CTF games. This is where Blue team players respawn after they get fragged.
 -------- KEYS --------
 <angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game.</angle>
@@ -2251,7 +2223,7 @@ Red team flag for CTF games.
 =============================================================================
 -->
 
-<point name="team_CTF_redplayer" color="1 .2 0" box="-16 -16 -24 16 16 32">
+<point name="team_CTF_redplayer" color="1 .2 0" box="-50 -24 -24 50 24 24">
 Initial Red team spawning position for CTF games. This is where players spawn when they join the Red team.
 -------- KEYS --------
 <angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game.</angle>
@@ -2263,7 +2235,7 @@ Initial Red team spawning position for CTF games. This is where players spawn wh
 =============================================================================
 -->
 
-<point name="team_CTF_redspawn" color="1 .2 0" box="-16 -16 -24 16 16 32">
+<point name="team_CTF_redspawn" color="1 .2 0" box="-50 -24 -24 50 24 24">
 Red team respawning position for CTF games. This is where Red team players respawn after they get fragged.
 -------- KEYS --------
 <angle key="angle" name="Yaw Angle">Direction in which player will look when spawning in the game.</angle>
