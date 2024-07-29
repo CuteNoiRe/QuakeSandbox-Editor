@@ -2343,6 +2343,7 @@ Emits debris with thick smoke trails when triggered.
 -------- KEYS --------
 <targetname key="targetname" name="Target Name">Activating entity points to this.</targetname>
 <targetname key="targetname2" name="Target Name 2">Activating entity points to this.</targetname>
+<angles key="angles" name="Pitch Yaw Roll">This sets the pitch and yaw aiming angles (default 0 0). The roll angle does not apply.</angles>
 <integer key="count" name="Count">The number of debris pieces to emit (default = 10).</integer>
 <texture key="targetShaderName" name="Target Shader Name">Name of the original shader to remap (see notes).</texture>
 <texture key="targetShaderNewName" name="Target Shader New Name">Name of the new shader to remap by (see notes).</texture>
@@ -2403,6 +2404,7 @@ shows animated environmental effects or overlay
 -------- KEYS --------
 <targetname key="targetname" name="targetname">activating entity points to this.</targetname>
 <targetname key="targetname2" name="targetname2">activating entity points to this.</targetname>
+<angles key="angles" name="Pitch Yaw Roll">This sets the pitch and yaw aiming angles (default 0 0). The roll angle does not apply.</angles>
 <color key="color" name="color">color of the particles for particle effect (default 1.0 1.0 1.0).</color>
 <integer key="count" name="count">number of particles for particle effect (0 - 255, default 100).</integer>
 <real key="speed" name="speed">speed of the particles (default 100).</real>
@@ -3595,7 +3597,7 @@ Executes various commands
 <point name="script_menu" color=".7 .3 .7" box="-8 -8 -8 8 8 8">
 Opens the menu in MGui.
 -------- KEYS --------
-<target key="target" name="Target">Menu file in mgui/pages folder.</target>
+<target key="target" name="Target">Menu file in mgui/ folder.</target>
 <targetname key="targetname" name="Target Name">Activating trigger points to this.</targetname>
 <target key="target2" name="Target 2">this points to entities to activate when this entity is triggered.</target>
 <targetname key="targetname2" name="Target Name 2">this points to entities to activate when this entity is triggered.</targetname>
